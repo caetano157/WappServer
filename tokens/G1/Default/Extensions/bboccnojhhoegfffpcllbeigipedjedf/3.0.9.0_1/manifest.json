@@ -1,0 +1,43 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "images/AAE20.png",
+         "38": "images/AAE40.png"
+      },
+      "default_popup": ""
+   },
+   "background": {
+      "service_worker": "ExtensionBackgroundLoader.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "AALogger.js", "HTMLRecorder.js", "HTMLBridgeAction.js", "HTMLExtensionBridge.js", "HTMLBrowserAction.js", "HTMLActionData.js", "HTMLEnum.js", "HTMLObject.js", "HTMLObjectSearch.js", "HTMLResult.js", "HTMLExecutor.js", "HTMLObjectNode.js", "HTMLCommon.js", "HTMLFrameInfo.js", "HTMLPluginObject.js", "HTMLWindowAvatar.js", "HTMLObjectPath.js", "HTMLJavascriptDOMXPath.js", "HTMLAACommon.js", "HTMLTrigger.js", "ExtensionTriggers.js", "DetectFramework.js", "HTMLAlertWrapper.js", "HTMLMapper.js", "HTMLScriptActivation.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Automation 360 extension to automate web applications in Google Chrome (MV3).",
+   "externally_connectable": {
+      "ids": [ "*" ],
+      "matches": [ "*://*.supremomono.com/*", "*://*.automationanywhere.digital/*" ]
+   },
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "images/AAE128.png",
+      "16": "images/AAE16.png",
+      "48": "images/AAE50.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkFS3NBlOoLdzlHtWoTB9RsB9dRe0TKcSEJwT07qut96+uZoJ/DWv3NaQwDWTt5g+vJAKydZCuGnHymUSdi6F1e4k4FRyWN/9LkGihYVF5d3YhK88+42nQ09VWIA2veel9D+LuRYWzhFzPuqAnc1u+rGTvMeiPZR+3R+PeL2rqZ4eD20vJezc6lWT2rxwzl8iWY7WJ8bKeIceeskgkmZcdBhcKpigXfk7yTk2zCXIBI+vWXzKv8NUO+yYzRnqgZ5bj1fJ2Vs25KkS+bfGNQQCOr0/nh6f6r5GvHVzh9+xahDXxY8zSiwzINvG/7Jj2USXjp95xZuNDbnX5ZBYKc8uWwIDAQAB",
+   "manifest_version": 3,
+   "name": "Automation 360",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "tabs", "webNavigation", "scripting", "nativeMessaging", "debugger", "alarms" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.9.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "HTMLAlertWrapper.js" ]
+   } ]
+}
