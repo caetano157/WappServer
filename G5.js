@@ -8,7 +8,7 @@ let client; // Declare the client variable at the top level to have access in th
 port = 5000;
 venom
     .create({
-        session: 'G4' //name of session
+        session: 'G5' //name of session
     })
     .then((waClient) => {
         client = waClient; // Store the client instance in the variable
